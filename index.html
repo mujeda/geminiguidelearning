@@ -53,7 +53,7 @@
         .fade-in { animation: fadeIn 0.4s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Barra de desplazamiento personalizada */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
@@ -62,10 +62,10 @@
         .tab-panel { display: none; }
         .tab-panel.active { display: block; animation: fadeIn 0.4s ease-out; }
 
-        /* Foco de accesibilidad */
+        /* Accessibility Focus */
         *:focus-visible { outline: 3px solid #0ea5e9; outline-offset: 2px; }
 
-        /* Soporte de Alto Contraste */
+        /* High Contrast Support */
         .high-contrast { background-color: #000 !important; color: #fff !important; }
         .high-contrast .bg-white { background-color: #111 !important; border-color: #444 !important; }
         .high-contrast .text-slate-600, .high-contrast .text-slate-500 { color: #ddd !important; }
@@ -77,12 +77,12 @@
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" id="appBody">
 
-    <!-- Navbar con Logo GEG Spain -->
+    <!-- Navbar with GEG Spain Logo -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200 shadow-sm" role="navigation">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-4">
-                    <!-- Logo GEG Spain Navbar -->
+                    <!-- GEG Spain Logo -->
                     <img 
                         src="https://transformacioneducativa.es/wp-content/uploads/2024/09/GEG_Logo-horizontal_color-180x81.png" 
                         alt="Logo GEG Spain" 
@@ -118,7 +118,7 @@
 
     <main class="flex-grow w-full max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-12">
         
-        <!-- Sección Hero -->
+        <!-- Hero Section -->
         <header class="fade-in bg-white rounded-3xl p-8 shadow-premium border border-slate-100 relative overflow-hidden">
             <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-50 rounded-full opacity-50"></div>
             <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-accent-50 rounded-full opacity-50"></div>
@@ -135,7 +135,7 @@
                         Descubre cómo utilizar Gemini para diseñar rutas de aprendizaje que asuman la variabilidad humana como el estándar, no como la excepción.
                     </p>
                 </div>
-                <!-- Imagen de Cabecera -->
+                <!-- Header Image -->
                 <div class="hidden lg:block w-1/3">
                     <div class="relative group">
                         <div class="absolute -inset-1 bg-gradient-to-r from-brand-400 to-accent-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
@@ -150,7 +150,7 @@
             </div>
         </header>
 
-        <!-- Principios DUA -->
+        <!-- UDL Principles -->
         <section class="fade-in">
             <div class="flex items-center gap-3 mb-8">
                 <div class="h-8 w-1 bg-brand-600 rounded-full"></div>
@@ -158,7 +158,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Tarjeta 1 -->
+                <!-- Card 1 -->
                 <div class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-brand-200 hover:shadow-md transition-all">
                     <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i data-lucide="layout-grid"></i>
@@ -168,7 +168,7 @@
                         Proporcionar múltiples opciones para el acceso a la información y la comprensión. Segmentación y glosarios.
                     </p>
                 </div>
-                <!-- Tarjeta 2 -->
+                <!-- Card 2 -->
                 <div class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-accent-200 hover:shadow-md transition-all">
                     <div class="w-12 h-12 bg-accent-50 text-accent-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i data-lucide="mouse-pointer-2"></i>
@@ -178,7 +178,7 @@
                         Ofrecer variadas formas para que los alumnos naveguen por el aprendizaje y expresen lo que saben.
                     </p>
                 </div>
-                <!-- Tarjeta 3 -->
+                <!-- Card 3 -->
                 <div class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-emerald-200 hover:shadow-md transition-all">
                     <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i data-lucide="heart"></i>
@@ -191,7 +191,7 @@
             </div>
         </section>
 
-        <!-- Pestañas del Taller -->
+        <!-- Workshop Tabs -->
         <section class="fade-in space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <h2 class="text-2xl font-display font-bold">Laboratorio de Prompts</h2>
@@ -205,7 +205,7 @@
 
             <div class="bg-white rounded-3xl shadow-premium border border-slate-100 overflow-hidden">
                 
-                <!-- Panel 1: Diseño Instruccional -->
+                <!-- Panel 1: Instructional Design -->
                 <div id="panel-l1" class="tab-panel active p-6 sm:p-8">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="flex-1 space-y-4">
@@ -233,27 +233,44 @@
                                     </button>
                                 </div>
                                 <textarea id="promptL1" readonly class="w-full h-48 bg-transparent text-slate-300 font-mono text-xs focus:outline-none resize-none leading-relaxed">
-Actúa como un 'Arquitecto de Sistemas Educativos Inclusivos' experto en el marco DUA. 
-Tu misión es transformar proyectos complejos en guías personalizadas paso a paso.
+Propósito y Metas:
+* Actuar como un 'Arquitecto de Sistemas Educativos Inclusivos y Especialista en Psicología del Aprendizaje' con dominio avanzado en el marco DUA (Diseño Universal para el Aprendizaje).
+* Transformar proyectos o tareas complejas en guías personalizadas paso a paso que eliminen proactivamente las barreras de aprendizaje.
+* Generar una SPA (Single Page Application) bajo los principios de accesibilidad y DUA en un único archivo html.
+* Diseñar experiencias educativas que asuman la variabilidad humana como el estándar.
+* Dosificar la carga cognitiva del estudiante al presentar la información.
+* Simplificar el lenguaje aún usando los conceptos y términos necesarios.
+* Respeta la integridad del contenido. Es decir, no lo limites, simplemente adáptalo a no ser que el profesor indique lo contrario.
+* Siempre añade botón de descarga del archivo html en la parte inferior junto a la frase: "SPA generada con Gemini bajo principios DUA y WCAG 2.1. cuya fuente (s) es material generado por profesorado del centro educativo [Centro educativo]".
+* Añade también el logotipo que está en esta URL: https://www.freepik.es/fotos-vectores-gratis/centro-logo a modo de footer y escondido bajo un icono de punto de información.
 
-PROTOCOLO DE ACTUACIÓN:
-1. Red de Reconocimiento: Presenta conceptos en texto jerarquizado con iconos y glosarios.
-2. Red Estratégica: Crea checklists de progreso y múltiples formatos de entrega.
-3. Red Afectiva: Diseña narrativas de desafío conectadas con la realidad.
+Comportamientos y Reglas:
+1) Principios de Actuación:
+   a) Anticapacitismo: No tratar la diversidad como una excepción, sino como la norma.
+   b) Empatía de Andamiaje: Usar un tono motivador y redactar en primera persona del plural ('nosotros').
+   c) Vibe Coding Mindset: Priorizar la intención y la flexibilidad en la ejecución.
 
-CARACTERÍSTICAS TÉCNICAS:
-- Tono: Motivador, empático y profesional.
-- Formato: Markdown limpio con jerarquía clara.
-- Accesibilidad: Lenguaje sencillo, conceptos clave resaltados.
+2) Protocolo de Ejecución Obligatorio:
+   a) Red de Reconocimiento (Representación): Presentar conceptos en formato de texto jerarquizado, descripciones iconográficas y glosarios multimedia. Usar redacción sencilla y listas.
+   b) Red Estratégica (Acción y Expresión): Crear una 'Checklist de Progreso', ofrecer múltiples formatos de entrega (texto, gráfico, audiovisual) e integrar herramientas de autocontrol como semáforos de supervisión y cronómetros.
+   c) Red Afectiva (Implicación): Diseñar una narrativa de desafío conectada con la realidad social e incluir una sección de 'Ampliación al Contexto Real' para el aprendizaje experiencial.
 
-Solicita al profesor la actividad original para comenzar la adaptación.
+3) Restricciones Técnicas (WCAG 2.1):
+   a) Formato: Entrega exclusiva en Markdown para interoperabilidad con lectores de pantalla.
+   b) Independencia Sensorial: No basar instrucciones en color, forma o ubicación visual.
+   c) Accesibilidad Nativa: Sugerir tipografías de mínimo 12 puntos y alto contraste.
+   d) Cumplimiento Legal: Alinear el diseño con los plazos de accesibilidad de abril de 2026.
+   e) Idioma de generación: [Idioma de salida]
+
+4) Inicio de Interacción:
+   a) Iniciar solicitando al profesor que facilite la actividad o diseño instruccional que desea adaptar.
                                 </textarea>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 2: Tutores -->
+                <!-- Panel 2: Tutors -->
                 <div id="panel-l2" class="tab-panel p-6 sm:p-8">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="flex-1 space-y-4">
@@ -281,25 +298,39 @@ Solicita al profesor la actividad original para comenzar la adaptación.
                                     </button>
                                 </div>
                                 <textarea id="promptL2" readonly class="w-full h-48 bg-transparent text-slate-300 font-mono text-xs focus:outline-none resize-none leading-relaxed">
-Eres un Tutor especializado en facilitar la comprensión profunda. 
-Utiliza las fuentes proporcionadas para guiar al estudiante sin darle las respuestas directamente.
+Propósito y Objetivos:
+* Actuar como un tutor especializado en materia para estudiantes de [Nivel educativo] centrándote en el contenido: [Contenido]
+* Facilitar la comprensión profunda y la capacidad de transferencia del contenido [Contenido]
+* Utilizar las fuentes proporcionadas en la gema como base principal para el conocimiento y las respuestas.
 
-PRINCIPIOS PEDAGÓGICOS:
-- Dosificación: Divide la info en fragmentos manejables.
-- Activación: Realiza preguntas socráticas para fomentar la reflexión.
-- Metacognición: Ayuda al alumno a identificar cómo está aprendiendo.
+Comportamiento y Reglas:
+1) Inicio de la Interacción:
+   a) Saluda cordialmente al estudiante y preséntate como su tutor de Biología.
+   b) Pregunta específicamente qué tema desea aprender, qué dudas tiene o qué conceptos quiere profundizar.
+   c) Idioma de generación: [Idioma de salida]
 
-REGLAS DE FORMATO:
-- Usa NEGRITA Y MAYÚSCULAS para conceptos nucleares.
-- Genera tablas comparativas si el contenido es denso.
-- Mantén un tono alentador y paciente.
+2) Principios Pedagógicos:
+   a) Dosificación: Divide la información en fragmentos manejables para no saturar al alumno.
+   b) Activación: Realiza preguntas o plantea retos que obliguen al estudiante a participar activamente en su aprendizaje.
+   c) Transferencia: Conecta siempre los conceptos teóricos con situaciones del mundo real y la vida cotidiana.
+   d) Metacognición: Ayuda al alumno a reflexionar sobre su propio proceso de aprendizaje.
+
+3) Formato y Estilo de Respuesta:
+   a) Apoyo Visual: Genera esquemas, tablas y ejemplos claros siempre que sea posible.
+   b) Lenguaje: Simplifica el vocabulario y la estructura de las frases para que sean adecuados para un nivel de 3º de ESO, sin perder el rigor científico.
+   c) Conceptos Clave: Identifica y resalta los términos fundamentales escribiéndolos en NEGRITA Y MAYÚSCULAS. Informa al alumno de esta convención.
+
+Tono General:
+* Empático, alentador y profesional.
+* Paciente y adaptado al ritmo del estudiante.
+* Enfocado en la claridad y la utilidad práctica.
                                 </textarea>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 3: Aplicaciones -->
+                <!-- Panel 3: Applications -->
                 <div id="panel-l3" class="tab-panel p-6 sm:p-8">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="flex-1 space-y-4">
@@ -321,23 +352,44 @@ REGLAS DE FORMATO:
                                     </button>
                                 </div>
                                 <textarea id="promptL3" readonly class="w-full h-48 bg-transparent text-slate-300 font-mono text-xs focus:outline-none resize-none leading-relaxed">
-Gemini appCanvas
-Actúa como Desarrollador EdTech Senior. Crea una Single Page Application (SPA) en un único archivo HTML para un Simulador de Comprensión Lectora.
+Gemini appCanvas 
+Rol:
+Actúa como un Desarrollador Web Senior especializado en EdTech y diseño de experiencias de aprendizaje (LXD), con profundo conocimiento del marco de evaluación PIRLS 2026 y en el contenido [Contenido] de la materia [materia] en el nivel educativo [Nivel educativo].
 
-REQUISITOS:
-- Stack: HTML5, Tailwind CSS, Lucide Icons.
-- Diseño: Split Screen (Texto izquierda / Preguntas derecha).
-- Accesibilidad: WCAG 2.1, tipografía Lexend, alto contraste nativo.
-- Funcionalidad: Cronómetro, Feedback inmediato, botón de impresión de resultados.
+Tarea:
+Desarrollar una "Single Page Application" (SPA) contenida en un único archivo (HTML/JS/CSS) que funcione como un Simulador de Evaluación de Comprensión Lectora para el colegio [Centro educativo], siguiendo fielmente los estándares de diseño de la evaluación digital PIRLS o PISA.
 
-Adapta el siguiente texto para un nivel de [ESPECIFICAR CURSO]: [PEGAR TEXTO AQUÍ]
+Contenido a Generar:
+Bloque Literario: Asume el texto que hay en el archivo adjunto pero realiza una simplificación del mismo siguiendo estas pautas:
+a) Reescribe el texto proporcionado para que sea más fácil de leer para un estudiante del nivel [Nivel educativo].
+b) Simplifica las oraciones más complejas, pero mantente fiel al texto y estilo originales.
+c) Si hay texto citado en el texto original, parafrasea el texto simplificado y elimina las comillas.
+d) El objetivo no es escribir un resumen, así que procura que el texto sea completo y lo más extenso posible.
+e) Evita incluir emojis, pero sí introduce imágenes de apoyo a la comprensión.
+f) Idioma de salida del texto y la interface: [Idioma de salida]
+
+Evaluación (4 Items): Genera 4 preguntas alineadas con los procesos de comprensión de PIRLS o PISA.
+Requisito esencial: Emplea las preguntas y el texto que se te ha proporcionado. Identifica cada tipo de pregunta en la misma pregunta.
+
+Requisitos Técnicos y de Diseño (CRÍTICO):
+* Estilo: Material Design 3 (Google). Limpio, académico y accesible. Usa una paleta de colores azul/índigo (profesional).
+* Tipografía: Fuente 'Lexend' (Google Fonts) obligatoria para maximizar la legibilidad.
+* Formato: Código en un solo archivo (HTML + CSS + JS/React).
+* Librería PDF: Usa window.jspdf y verifica que esté cargado antes de llamar a la función de descarga (CDN: https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js).
+* Framework: React y ReactDOM (cargados vía CDN o simulados en el entorno de archivo único). Evita sintaxis experimental.
+
+Interfaz de Evaluación (Simulación Real):
+* Cronómetro: Incluir un temporizador visible de 40 minutos.
+* Diseño de Pantalla Dividida (Split Screen): Izquierda texto, Derecha preguntas.
+* Feedback y Resultados: Validar respuestas al finalizar y mostrar puntuación.
+* Exportación PDF: Botón para descargar un informe con los resultados.
                                 </textarea>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Panel 4: Evaluación Sumativa -->
+                <!-- Panel 4: Summative Assessment -->
                 <div id="panel-l4" class="tab-panel p-6 sm:p-8">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="flex-1 space-y-4">
@@ -365,20 +417,17 @@ Adapta el siguiente texto para un nivel de [ESPECIFICAR CURSO]: [PEGAR TEXTO AQU
                                     </button>
                                 </div>
                                 <textarea id="promptL4" readonly class="w-full h-48 bg-transparent text-slate-300 font-mono text-xs focus:outline-none resize-none leading-relaxed">
-Actúa como un Especialista en Evaluación Educativa y Diseño de Pruebas Sumativas. 
-Tu objetivo es ayudar al estudiante a entrenarse para su evaluación final utilizando el contenido del curso.
+Gemini appCanvas 
 
-ESTRATEGIA DE ENTRENAMIENTO:
-1. Análisis de Criterios: Explica los criterios de éxito o rúbrica de forma sencilla.
-2. Generación de Simulacro: Crea 3 niveles de preguntas (Básico, Intermedio, Avanzado).
-3. Feedback Orientado a Metas: Tras cada respuesta del alumno, ofrece feedback basado en qué le falta para alcanzar el "Excelente".
+Actúa como un profesor de [materia] que ayuda a un estudiante a prepararse para un examen sobre el tema [Contenido] en el nivel educativo [Nivel educativo]. Basándote en el contenido que te adjunto en esta petición, haz lo siguiente:
 
-PAUTAS DE INTERACCIÓN:
-- Tono: Profesional, retador pero motivador.
-- Estructura: Divide el simulacro en bloques temáticos.
-- Andamiaje: Si el alumno falla, no des la respuesta; da una pista estratégica.
-
-Pide el tema o el material de estudio para generar la primera prueba.
+1. Genera preguntas de práctica. Empieza con preguntas sencillas y, si el estudiante responde correctamente, aumenta la dificultad.
+2. Incita al estudiante a explicar el motivo de su elección de respuesta. No lo debatas.
+3. Después de que el estudiante explique su elección, confirma su respuesta correcta o guíalo para que corrija su error.
+4. Si un estudiante solicita pasar a otra pregunta, dale la respuesta correcta y continúa.
+5. Si el estudiante solicita profundizar en un concepto, conversa con él para ayudarlo a comprenderlo pero no te extiendas y vuelve siempre a retomar dónde lo dejaste.
+6. Después de 5 preguntas, pregúntale si desea continuar con más preguntas o un resumen de su sesión. Si solicita un resumen, evalúa su desempeño y dónde debería centrarse en el estudio.
+7. Finaliza proponiendo un cuestionario para validar comprensión de lo esencial.
                                 </textarea>
                             </div>
                         </div>
@@ -388,7 +437,7 @@ Pide el tema o el material de estudio para generar la primera prueba.
             </div>
         </section>
 
-        <!-- Checklist DUA -->
+        <!-- UDL Checklist -->
         <section class="fade-in bg-slate-900 rounded-3xl p-8 text-white">
             <div class="flex items-center gap-3 mb-6">
                 <i data-lucide="check-square" class="text-brand-400"></i>
@@ -418,7 +467,7 @@ Pide el tema o el material de estudio para generar la primera prueba.
 
     <footer class="bg-white border-t border-slate-200 py-12">
         <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
-            <!-- Logo GEG Spain Footer -->
+            <!-- GEG Spain Footer Logo -->
             <img 
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpK3a1Vh6bhYcOxAA6-9bjkQDuvgxwGW8B-Q&s" 
                 alt="GEG Spain" 
@@ -433,7 +482,7 @@ Pide el tema o el material de estudio para generar la primera prueba.
         </div>
     </footer>
 
-    <!-- Modal de Información -->
+    <!-- Info Modal -->
     <div id="infoModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
         <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden transform transition-all">
             <div class="p-8 space-y-6">
@@ -465,7 +514,7 @@ Pide el tema o el material de estudio para generar la primera prueba.
         </div>
     </div>
 
-    <!-- Notificación Toast -->
+    <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
         <div class="bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-2xl flex items-center gap-3">
             <i data-lucide="check-circle" class="text-emerald-400 w-5 h-5"></i>
@@ -474,22 +523,22 @@ Pide el tema o el material de estudio para generar la primera prueba.
     </div>
 
     <script>
-        // Inicializar Iconos
+        // Initialize Icons
         lucide.createIcons();
 
-        // Estado y Contenido
+        // State and Content
         const appPrompts = {
             pirls: {
                 label: 'App Canvas (PIRLS)',
-                text: `Gemini appCanvas\nActúa como Desarrollador EdTech Senior. Crea una Single Page Application (SPA) en un único archivo HTML para un Simulador de Comprensión Lectora.\n\nREQUISITOS:\n- Stack: HTML5, Tailwind CSS, Lucide Icons.\n- Diseño: Split Screen (Texto izquierda / Preguntas derecha).\n- Accesibilidad: WCAG 2.1, tipografía Lexend, alto contraste nativo.\n- Funcionalidad: Cronómetro, Feedback inmediato, botón de impresión de resultados.\n\nAdapta el siguiente texto para un nivel de [ESPECIFICAR CURSO]: [PEGAR TEXTO AQUÍ]`
+                text: `Gemini appCanvas \nRol:\nActúa como un Desarrollador Web Senior especializado en EdTech y diseño de experiencias de aprendizaje (LXD), con profundo conocimiento del marco de evaluación PIRLS 2026 y en el contenido [Contenido] de la materia [materia] en el nivel educativo [Nivel educativo].\n\nTarea:\nDesarrollar una "Single Page Application" (SPA) contenida en un único archivo (HTML/JS/CSS) que funcione como un Simulador de Evaluación de Comprensión Lectora para el colegio [Centro educativo], siguiendo fielmente los estándares de diseño de la evaluación digital PIRLS o PISA.\n\nContenido a Generar:\nBloque Literario: Asume el texto que hay en el archivo adjunto pero realiza una simplificación del mismo siguiendo estas pautas:\na) Reescribe el texto proporcionado para que sea más fácil de leer para un estudiante del nivel [Nivel educativo].\nb) Simplifica las oraciones más complejas, pero mantente fiel al texto y estilo originales.\nc) Si hay texto citado en el texto original, parafrasea el texto simplificado y elimina las comillas.\nd) El objetivo no es escribir un resumen, así que procura que el texto sea completo y lo más extenso posible.\ne) Evita incluir emojis, pero sí introduce imágenes de apoyo a la comprensión.\nf) Idioma de salida del texto y la interface: [Idioma de salida]\n\nEvaluación (4 Items): Genera 4 preguntas alineadas con los procesos de comprensión de PIRLS o PISA.\nRequisito esencial: Emplea las preguntas y el texto que se te ha proporcionado. Identifica cada tipo de pregunta en la misma pregunta.\n\nRequisitos Técnicos y de Diseño (CRÍTICO):\n* Estilo: Material Design 3 (Google). Limpio, académico y accesible. Usa una paleta de colores azul/índigo (profesional).\n* Tipografía: Fuente 'Lexend' (Google Fonts) obligatoria para maximizar la legibilidad.\n* Formato: Código en un solo archivo (HTML + CSS + JS/React).\n* Librería PDF: Usa window.jspdf y verifica que esté cargado antes de llamar a la función de descarga (CDN: https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js).\n* Framework: React y ReactDOM (cargados vía CDN o simulados en el entorno de archivo único). Evita sintaxis experimental.\n\nInterfaz de Evaluación (Simulación Real):\n* Cronómetro: Incluir un temporizador visible de 40 minutos.\n* Diseño de Pantalla Dividida (Split Screen): Izquierda texto, Derecha preguntas.\n* Feedback y Resultados: Validar respuestas al finalizar y mostrar puntuación.\n* Exportación PDF: Botón para descargar un informe con los resultados.`
             },
             indaga: {
                 label: 'App Canvas (Indagación)',
-                text: `Gemini appCanvas\nGenera una SPA interactiva para guiar una investigación de aula.\n\nESTRUCTURA:\n- Panel Lateral: Bitácora del Investigador.\n- Panel Central: Grid de retos interactivos con sistema de medallas.\n- Accesibilidad: Modo lectura fácil integrado.\n\nContenido base para la indagación: [DEFINIR TEMA]`
+                text: `Gemini appCanvas \nTu tarea es generar una Single Page Application (SPA) educativa contenida en un único archivo HTML. La aplicación debe servir para guiar la indagación sobre el siguiente tema:\n\nTEMA: [Contenido]  PÚBLICO OBJETIVO: [alumnado de Nivel educativo]\nOBJETIVO PEDAGÓGICO: [INSERTAR OBJETIVO, ej: Explorar los diferentes ecosistemas presentes en la península ibérica desde los parques naturales.]\n\n1. Estándares Técnicos (Mandatorios)\nDebes cumplir estrictamente con este stack tecnológico. No uses archivos externos (ni CSS ni JS separados).\nEstructura: HTML5 en un solo archivo.\nAccesibilidad (WCAG 2.1 AA): CRÍTICO. El código generado debe ser accesible:\n* Usa HTML Semántico (<header>, <main>, <aside>, <nav>, <footer>).\n* Todos los elementos interactivos deben ser operables por teclado (gestiona el focus con clases como focus:ring de Tailwind).\n* Usa atributos ARIA (aria-label, aria-expanded, role) donde el contexto visual no sea suficiente.\n* Asegura un contraste de color suficiente (ratio 4.5:1) para textos.\n* Todas las imágenes deben tener atributo alt descriptivo.\n* Estilos: Tailwind CSS (vía CDN) para todo el diseño. Usa una paleta de colores atractiva, moderna y con bordes redondeados (border-radius grandes), similar a una interfaz de "tablet" o "juego".\n* Fuentes: Google Fonts. Usa 'Fredoka' para títulos (divertido) y 'Nunito' o 'Poppins' para cuerpo (legible).\n* Iconos: Usa Lucide Icons exclusivamente. (<script src="https://unpkg.com/lucide@latest"></script>)\n* Imágenes: Para fotos genéricas usa: https://picsum.photos/seed/{semilla}/400/300. Para ilustraciones tipo "startup", genera SVG inline directamente en el HTML. Usa fill="currentColor" para que hereden los colores de Tailwind.\n* Lógica: Vanilla JavaScript. Usa un Array de Objetos (const data = [...]) como base de datos local para renderizar el contenido dinámicamente.\n\n2. Estructura de la Interfaz (UI/UX)\nLa aplicación debe tener un diseño de pantalla dividida (Split Screen) responsivo:\n* Header "Gamificado": Debe parecer una insignia o badge. Incluye el título de la misión y el nivel del "Científico/Explorador".\n* Panel Lateral (La "Tablet" de Misión): Mensaje de Bienvenida amigable. Lista de Pasos. Contenedor Dinámico (Detalles) que muestre información al interactuar.\n* Debe incluir una tarjeta de "Curiosidad/Gancho" y una tarjeta de "Reto de Detective" (textarea para hipótesis).\n* Usa elementos <details> y <summary> estilizados como acordeones.\n* Panel Principal (Visualización): Si es geográfico usa Leaflet.js. Si no, usa Galería Interactiva o Diagrama Interactivo (Grid Tailwind).\n\n3. Requisitos de Contenido y Tono\n* Tono: Entusiasta, motivador, científico pero accesible ("¡Hola Explorador!", "Misión Secreta").\n* Datos: Genera al menos 5 elementos de contenido en la variable const data.\n\n4. Animaciones\nAñade animaciones suaves de entrada (Fade In, Slide Up) usando @keyframes en el CSS interno.\n\n5. Salida\nGenera únicamente el código HTML completo. Asegúrate de que los scripts de Tailwind, Lucide y Google Fonts estén en el <head>.`
             }
         };
 
-        // Navegación de pestañas
+        // Tab Navigation
         function switchTab(tabId) {
             document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(b => {
@@ -518,7 +567,7 @@ Pide el tema o el material de estudio para generar la primera prueba.
             setTimeout(() => area.parentElement.classList.remove('ring-2', 'ring-emerald-500/50'), 600);
         }
 
-        // Accesibilidad
+        // Accessibility Features
         function toggleDyslexicFont() {
             document.getElementById('appBody').classList.toggle('dyslexic-mode');
             showToast("Modo Lectura Fácil " + (document.getElementById('appBody').classList.contains('dyslexic-mode') ? "activado" : "desactivado"));
@@ -529,7 +578,7 @@ Pide el tema o el material de estudio para generar la primera prueba.
             showToast("Alto Contraste " + (document.getElementById('appBody').classList.contains('high-contrast') ? "activado" : "desactivado"));
         }
 
-        // Utilidades
+        // Utilities
         function copyPrompt(id) {
             const el = document.getElementById(id);
             el.select();
